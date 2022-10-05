@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:BuggyMaui.ViewModels"
+             x:Class="BuggyMaui.Views.ReviewPage"
+             x:DataType="viewmodel:ReviewViewModel"
+             Title="Edit and Review">
+    <VerticalStackLayout Padding="15"
+                         Margin="10">
+        <Button x:Name="GoBackButton"
+                Text="Go Back"
+                HorizontalOptions="Start"
+                Margin="5"
+                Clicked="GoBackButton_Clicked"/>
+
+        <Grid ColumnDefinitions="*,*"
+              ColumnSpacing="10"
+              RowDefinitions="*,*,*,*,*"
+              RowSpacing="5">
+            <Label Text="ID"
+                   Grid.Column="0"
+                   Grid.Row="0"/>
+            <Label Text="{Binding Selection.Id}"
+                   Grid.Column="1"
+                   Grid.Row="0"/>
+            <Label Text="First Name"
+                   Grid.Column="0"
+                   Grid.Row="1"/>
+            <Entry Text="{Binding Selection.FirstName}"
+                   Grid.Column="1"
+                   Grid.Row="1"/>
+            <Label Text="Last Name"
+                   Grid.Column="0"
+                   Grid.Row="2"/>
+            <Entry Text="{Binding Selection.LastName}"
+                   Grid.Column="1"
+                   Grid.Row="2"/>
+            <Label Text="Phone"
+                   Grid.Column="0"
+                   Grid.Row="3"/>
+            <Entry Text="{Binding Selection.Phone}"
+                   Grid.Column="1"
+                   Grid.Row="3"/>
+            <Label Text="Email"
+                   Grid.Column="0"
+                   Grid.Row="4"/>
+            <Entry Text="{Binding Selection.Email}"
+                   Grid.Column="1"
+                   Grid.Row="4"/>
+        </Grid>
+
+        <Button x:Name="SubmitButton"
+                Text="Submit"
+                HorizontalOptions="Center"
+                Margin="15"
+                Clicked="SubmitButton_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

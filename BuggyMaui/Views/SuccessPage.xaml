@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:BuggyMaui.ViewModels"
+             x:Class="BuggyMaui.Views.SuccessPage"
+             x:DataType="viewmodel:SuccessViewModel"
+             Title="Success!">
+    <VerticalStackLayout Padding="15"
+                         Margin="10">
+
+        <Label x:Name="MessageLabel"
+               HorizontalOptions="Center"
+               Text="{Binding Message}"
+               TextColor="MediumPurple"
+               Padding="25"
+               Margin="15"/>
+
+        <Button Text="New Search"
+                HorizontalOptions="Center"
+                Padding="25"
+                Margin="15"
+                Clicked="Button_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>
